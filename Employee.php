@@ -1,6 +1,5 @@
 <?php
 
-
 class Employee implements IEmployee {
     
     private $age;
@@ -16,39 +15,48 @@ class Employee implements IEmployee {
         $this->salary = $salary;
     }
 
-    public function getAge() {
+    public function getAge(): int 
+    {
         return $this->age;
     }
 
-    public function getGender() {
+    public function getGender(): string 
+    {
         return $this->gender;
     }
 
-    public function getName() {
+    public function getName(): string 
+    {
         return $this->name;
     }
 
-    public function getSalary() {
+    public function getSalary(): int 
+    {
         return $this->salary;
     }
 
-    public function setAge() {
+    public function setAge(): int 
+    {
         return $this->age = func_get_arg(0);
     }
 
-    public function setGender() {
+    public function setGender(): string 
+    {
         return $this->gender = func_get_arg(0);
     }
 
-    public function setName() {
+    public function setName(): string 
+    {
         return $this->name = func_get_arg(0);
     }
 
-    public function setSalary() {
+    public function setSalary(): int 
+    {
         return $this->salary = func_get_arg(0);
     }
     
-    public function getPerson() {
+    public function getPerson(): string 
+    {
         return "<hr><b>User: {$this->name}</b><br>
                 Age: {$this->age}<br>
                 Gender: {$this->gender}<br>
